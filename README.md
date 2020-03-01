@@ -26,5 +26,7 @@ plot2 <- ggplot(night_subset_ordered_2, aes(x = factor(Date), y=Deaths, fill = C
 plot2 + coord_polar(start=3*pi/2) +	ggtitle("East: Reasons for army mortality") + xlab("")
 
 plot_combined <- ggplot(night_data, aes(x = factor(Date), y=Deaths, fill = Cause)) + geom_bar(width = 1, position="identity", stat="identity", color="black") +  scale_y_sqrt() + facet_grid(. ~ Regime, scales="free", labeller=label_both)
-plot_combined + coord_polar(start=3*pi/2) +	ggtitle("East: Reasons for army mortality") + 	xlab("")
+plot_combined + coord_polar(start=3*pi/2) +	ggtitle("East: Reasons for army mortality") + xlab("")
+
+plot_combined
 ```
